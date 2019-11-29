@@ -1,0 +1,40 @@
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.app-content {
+  flex: 1 0 auto;
+  margin: 13px auto auto;
+  width: 90%;
+}
+
+.app-footer {
+  position: fixed;
+  top: calc(100% - 54px);
+  box-shadow: 0 -2px 8px #f0f1f2;
+  height: 54px;
+  width: 100%;
+}
+
+.block-title {
+  display: table-cell;
+  height: 56px;
+  width: 100%;
+  vertical-align: middle;
+
+  font-family: Exo 2;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  box-shadow: 0 2px 8px #f0f1f2;
+
+  color: #000000;
+}
+
+.block-title-title {
+  margin: 10px auto auto 24px;
+}
