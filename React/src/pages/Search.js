@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card, List } from 'antd';
 import { API_UPLOADS_URL } from '../constants';
 
+
 import './Search.css'
 
 const { Meta } = Card;
@@ -27,6 +28,18 @@ class Search extends Component {
                 price: 550,
                 src: "2.jpg"
             },
+            {
+                name: 'Игровая приставка Sony PlayStation 4',
+                price: 450,
+                src: "3.jpg"
+            }
+            ,
+            {
+                name: 'Игровая приставка Sony PlayStation 4',
+                price: 450,
+                src: "3.jpg"
+            }
+            ,
             {
                 name: 'Игровая приставка Sony PlayStation 4',
                 price: 450,
@@ -63,7 +76,7 @@ class Search extends Component {
                             </List.Item>
                         )}
                     />
-                    <div style={{height: "100px"}}/> {/*Space for scrolling*/}
+                    <div style={{ height: "100px" }} /> {/*Space for scrolling*/}
                 </div>
                 : <p className="line-empty">Ничего не найдено.</p>
         }
