@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Card, List } from 'antd';
 
 import ListItem from './ListItem';
-import SearchForm from './SearchForm';
+// import SearchForm from './SearchForm';
 
 import './Search.css'
 
@@ -48,7 +48,7 @@ class Search extends Component {
         return <div className="search"> {
             products.length != 0
                 ? <div>
-                    <SearchForm />
+                    {/* <SearchForm /> */}
 
                     <ListItem />
                     <div style={{ height: "100px" }} /> {/*Space for scrolling*/}
