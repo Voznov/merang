@@ -1,0 +1,7 @@
+.item {
+  margin: auto;
+  width: 156px;
+  height: 300px;
+  overflow-x: hidden;
+  box-shadow: 5px 5px 8px #f0f1f2;
+}

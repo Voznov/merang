@@ -5,8 +5,13 @@ import './SearchForm.css';
 class SearchForm extends Component {
   render() {
     return (
-      <div>
-        ntcnt
+      <div >
+        <form>
+          <input
+            className="search-form__input"
+            type="text"
+            placeholder="Что вы ищите?" />
+        </form>
       </div>
     );
   }

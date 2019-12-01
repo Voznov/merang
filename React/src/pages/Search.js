@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Card, List } from 'antd';
-import { API_UPLOADS_URL } from '../constants';
 
+import ListItem from './ListItem';
+import SearchForm from './SearchForm';
 
 import './Search.css'
-
-const { Meta } = Card;
 
 class Search extends Component {
     constructor(props) {
@@ -49,33 +48,9 @@ class Search extends Component {
         return <div className="search"> {
             products.length != 0
                 ? <div>
-                    <List
-                        grid={{
-                            gutter: 1,
-                            xs: 2,
-                            sm: 3,
-                            md: 4,
-                            lg: 4,
-                            xl: 6,
-                            xxl: 6,
-                        }}
-                        dataSource={products}
-                        renderItem={item => (
-                            <List.Item>
-                                <Card
-                                    className="product-box"
-                                    hoverable
-                                    cover={<img
-                                        src={API_UPLOADS_URL + "/" + item.src}
-                                        width="156px"
-                                        height="156px"
-                                    />}
-                                >
-                                    <Meta title={item.price + " ₽/день"} description={item.name} />
-                                </Card>
-                            </List.Item>
-                        )}
-                    />
+                    <SearchForm />
+
+                    <ListItem />
                     <div style={{ height: "100px" }} /> {/*Space for scrolling*/}
                 </div>
                 : <p className="line-empty">Ничего не найдено.</p>

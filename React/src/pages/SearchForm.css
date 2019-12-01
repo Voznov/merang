@@ -1,0 +1,25 @@
+.search-form__input {
+  position: relative;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px 12px 8px 47px;
+  border: none;
+  background: #f9f9f9;
+  border-radius: 27px;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7c7c7c;
+}
+
+.search-form__input::before {
+  content: ' ';
+  position: absolute;
+  top: 8px;
+  left: 17px;
+  width: 15px;
+  height: 15px;
+  background-image: url('../assets/search.svg');
+}
