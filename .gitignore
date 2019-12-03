@@ -9,3 +9,6 @@ Spring/*.iml
 Spring/*.ipr
 Spring/.idea
 Spring/target/
+
+#Deploy
+deploy.sh
