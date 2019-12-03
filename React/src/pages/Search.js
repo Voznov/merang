@@ -48,9 +48,9 @@ class Search extends Component {
         return <div className="search"> {
             products.length != 0
                 ? <div>
-                    <SearchForm />
+                    {/* <SearchForm /> */}
 
-                    <ListItem />
+                    {/* <ListItem /> */}
                     <div style={{ height: "100px" }} /> {/*Space for scrolling*/}
                 </div>
                 : <p className="line-empty">Ничего не найдено.</p>

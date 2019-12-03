@@ -4,7 +4,6 @@ import { Button, Form, Icon } from 'antd';
 import { APP_NAME } from '../constants';
 
 import './Greeting.css';
-import SearchForm from "./SearchForm";
 
 const FormItem = Form.Item;
 
