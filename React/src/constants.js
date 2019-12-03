@@ -1,7 +1,7 @@
 export const APP_NAME = 'Merang';
 export const APP_VERSION = '0.1';
 
-// export const API_BACK_URL = 'http://localhost:8888/api';
+// export const API_BACK_URL = 'http://localhost:8888';
 export const API_BACK_URL = 'https://merang.ru/api';
 export const API_UPLOADS_URL = 'https://merang.ru/uploads';
 
