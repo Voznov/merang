@@ -1,3 +1,7 @@
+.search-form {
+  display: flex;
+}
+
 .search-form__input {
   width: 100%;
   margin-bottom: 8px;
@@ -17,6 +21,29 @@
   background-position: 17px 12px;
 }
 
+.search-form__input-filter {
+  width: 80%;
+}
+
 .search-form__input:focus {
   color: #000000;
+}
+
+.search-form__filter-button {
+  display: block;
+  width: 48px;
+  height: 40px;
+  border-radius: 27px;
+  margin-left: 12px;
+  background-color: #1890ff;
+  background-image: url('../assets/filter.svg');
+  background-size: 13px 13px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.search-form__filter-button:hover,
+.search-form__filter-button:focus,
+  {
+  background-color: #40a9ff;
 }

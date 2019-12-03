@@ -1,8 +1,11 @@
 import React, { Component } from "react";
-import './Greeting.css';
 import { Link } from 'react-router-dom';
 import { Button, Form, Icon } from 'antd';
 import { APP_NAME } from '../constants';
+
+import './Greeting.css';
+import SearchForm from "./SearchForm";
+
 const FormItem = Form.Item;
 
 class Greeting extends Component {
