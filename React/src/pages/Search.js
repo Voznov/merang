@@ -3,6 +3,7 @@ import { Card, List } from 'antd';
 
 import ListItem from './ListItem';
 import SearchForm from './SearchForm';
+import Slider from './Slider';
 
 import './Search.css'
 
@@ -51,6 +52,8 @@ class Search extends Component {
                     {/* <SearchForm /> */}
 
                     {/* <ListItem /> */}
+
+                    <Slider />
                     <div style={{ height: "100px" }} /> {/*Space for scrolling*/}
                 </div>
                 : <p className="line-empty">Ничего не найдено.</p>
