@@ -51,12 +51,12 @@ class Search extends Component {
             products.length != 0
                 ? <div>
                     {/* <SearchForm /> */}
-                    
+
                     {/* <ListItem /> */}
 
-                    <Slider />
+                    {/* <Slider /> */}
 
-                    {/* <Deals /> */}
+                    <Deals />
                     <div style={{ height: "100px" }} /> {/*Space for scrolling*/}
                 </div>
                 : <p className="line-empty">Ничего не найдено.</p>
