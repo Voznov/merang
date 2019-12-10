@@ -1,0 +1,57 @@
+.slider-news {
+  width: 200%;
+  display: flex;
+}
+
+.slider-news__wrap {
+  position: relative;
+  width: 80%;
+  background: url("../../src/assets/background/news/green-card.png") no-repeat
+    50% 50%;
+  //background: rgba(105, 161, 159, 0.5);
+  background-size: cover;
+  margin-right: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.slider-news__title {
+  margin: 0;
+  padding: 0;
+  padding: 22px 32px 4px 32px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.slider-news__text {
+  margin: 0;
+  margin-bottom: 55px;
+  padding: 0;
+  padding: 0 32px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.slider-news__button {
+  position: absolute;
+  right: 32px;
+  bottom: -12px;
+  background: #ffffff;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #715bb9;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  padding: 5px 10px;
+}
