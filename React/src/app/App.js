@@ -15,6 +15,7 @@ import Signup from '../pages/Signup';
 import Greeting from '../pages/Greeting';
 import Profile from '../pages/Profile';
 import Search from '../pages/Search';
+import Deals from '../pages/Deals';
 
 import { Layout, notification, Table } from 'antd';
 import NotFound from '../common/NotFound';
@@ -132,7 +133,7 @@ class App extends Component {
                 {/* CHAT */}
               </Route>
               <Route path="/offer">
-                {/* OFFER */}
+                <Deals />
               </Route>
               <Route path="/search">
                 <Search />
