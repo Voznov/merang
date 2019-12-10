@@ -49,8 +49,6 @@ class Search extends Component {
         return <div className="search"> {
             products.length != 0
                 ? <div>
-                    {/* <SearchForm /> */}
-
                     {<ListItem />}
 
                     {/* <Slider /> */}

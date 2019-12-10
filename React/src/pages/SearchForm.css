@@ -19,6 +19,7 @@
   background-size: 15px 15px;
   background-repeat: no-repeat;
   background-position: 17px 12px;
+  z-index: 100;
 }
 
 .search-form__input-filter {

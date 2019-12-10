@@ -16,6 +16,7 @@ import Greeting from '../pages/Greeting';
 import Profile from '../pages/Profile';
 import Search from '../pages/Search';
 import Deals from '../pages/Deals';
+import SearchForm from '../pages/Deals';
 
 import { Layout, notification, Table } from 'antd';
 import NotFound from '../common/NotFound';
@@ -114,7 +115,10 @@ class App extends Component {
                     <div className="block-title-title" >Сделки</div>
                   </Route>
                   <Route path="/search">
-                    <div className="block-title-title" >Поиск</div>
+                    <div className="block-title-title" >
+                      <p>Поиск</p>
+                      <SearchForm/>
+                    </div>
                   </Route>
                   <Route path="/liked">
                     <div className="block-title-title" >Нравится</div>
