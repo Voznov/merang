@@ -3,6 +3,8 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
+  overflow: hidden;
+  font-family: "Exo 2", sans-serif;
 }
 
 .app-content {
@@ -29,7 +31,6 @@
   width: 90%;
   height: 56px;
   margin: 0 auto;
-  font-family: 'Exo 2', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
