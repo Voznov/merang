@@ -66,8 +66,6 @@ class Card extends Component {
     render() {
         return
         <div className="deals--cards__card">
-
-
         </div>
     }
 }

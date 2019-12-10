@@ -51,7 +51,7 @@ class Search extends Component {
                 ? <div>
                     {/* <SearchForm /> */}
 
-                    {/* <ListItem /> */}
+                    {<ListItem />}
 
                     <Slider />
                     <div style={{ height: "100px" }} /> {/*Space for scrolling*/}
