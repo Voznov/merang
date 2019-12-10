@@ -16,7 +16,7 @@ import Greeting from '../pages/Greeting';
 import Profile from '../pages/Profile';
 import Search from '../pages/Search';
 import Deals from '../pages/Deals';
-import SearchForm from '../pages/Deals';
+import SearchForm from '../pages/SearchForm';
 
 import { Layout, notification, Table } from 'antd';
 import NotFound from '../common/NotFound';
@@ -109,19 +109,25 @@ class App extends Component {
               <div className="block-title">
                 <Switch>
                   <Route path="/chat">
-                    <div className="block-title-title" >Чаты</div>
+                    <div className="block-title-wrap" >
+                      <p className="block-title-text">Чаты</p>
+                    </div>
                   </Route>
                   <Route path="/offer">
-                    <div className="block-title-title" >Сделки</div>
+                    <div className="block-title-wrap" >
+                      <p className="block-title-text">Сделки</p>
+                    </div>
                   </Route>
                   <Route path="/search">
-                    <div className="block-title-title" >
-                      <p>Поиск</p>
-                      <SearchForm/>
+                    <div className="block-title-wrap" >
+                      <p className="block-title-text">Поиск</p>
+                      <SearchForm />
                     </div>
                   </Route>
                   <Route path="/liked">
-                    <div className="block-title-title" >Нравится</div>
+                    <div className="block-title-wrap" >
+                      <p className="block-title-text">Нравится</p>
+                    </div>
                   </Route>
                   } />
                 </Switch>

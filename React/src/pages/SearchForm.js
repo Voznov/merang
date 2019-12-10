@@ -5,7 +5,7 @@ import './SearchForm.css';
 class SearchForm extends Component {
   render() {
     return (
-      <div>
+      <div className="search-form__wrap">
         <form>
           <input
             className="search-form__input"

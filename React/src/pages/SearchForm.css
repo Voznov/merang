@@ -1,14 +1,20 @@
+.search-form__wrap {
+  border-top: none;
+  box-shadow: 0 6px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
 .search-form {
   display: flex;
 }
 
 .search-form__input {
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
   margin-bottom: 8px;
   padding: 9px 12px 9px 47px;
   border: none;
   border-radius: 27px;
-  font-family: 'Exo 2';
+  font-family: "Exo 2";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -37,14 +43,13 @@
   border-radius: 27px;
   margin-left: 12px;
   background-color: #1890ff;
-  background-image: url('../assets/icon/filter.svg');
+  background-image: url("../assets/icon/filter.svg");
   background-size: 13px 13px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 .search-form__filter-button:hover,
-.search-form__filter-button:focus,
-  {
+.search-form__filter-button:focus {
   background-color: #40a9ff;
 }
