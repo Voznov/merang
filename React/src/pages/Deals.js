@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Deals.css";
-import {getOccupyDeals, getSurrenderDeals} from "../util/APIUtils";
+import { getOccupyDeals, getSurrenderDeals } from "../util/APIUtils";
 
 
 class Deals extends Component {
@@ -14,25 +14,24 @@ class Deals extends Component {
     }
 
     handleOccupyClick() {
-    this.setState({deals: false});
+        this.setState({ deals: false });
     }
 
     handleSurrenderClick() {
-    this.setState({deals: true});
+        this.setState({ deals: true });
     }
 
     render() {
-        return <section className="deals--container">
-            <div className="deals--type">
-                <div className="deals--occupy" >
-                  <h2 className="deals--occupy__header">Арендую</h2>                 {/* доделаю изменения классов active в зависимости от state */}
+        return <section className="deals__container">
+            <div className="deals__type">
+                <div className="deals__wrap deals__occupy" >
+                    <h2 className="deals__header deals__active">Арендую</h2>                 {/* доделаю изменения классов active в зависимости от state */}
                 </div>
-                <div className="deals-surrender">
-                  <h2 className="deals--surrender__header">Сдаю</h2>
-                  <div className="deals--surrender__active"></div>
+                <div className="deals__wrap deals__surrender">
+                    <h2 className="deals__header">Сдаю</h2>
                 </div>
             </div>
-            <Cards deals_state={this.state.deals}/>
+            <Cards deals_state={this.state.deals} />
         </section>
     }
 }
@@ -48,11 +47,11 @@ class Cards extends Component {
     }
     render() {
         return <section className="deals--cards">
-        {this.state.deals ? (
-          <Card />                                //передается с сервера список карточек с арендой
-        ) : (
-          <Card/>                                 // либо список карточек со сдачей (сам список доделаю)
-        )}
+            {this.state.deals ? (
+                <Card />                                //передается с сервера список карточек с арендой
+            ) : (
+                    <Card />                                 // либо список карточек со сдачей (сам список доделаю)
+                )}
         </section>
     }
 }

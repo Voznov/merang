@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Card, List } from 'antd';
 
 import ListItem from './ListItem';
-import SearchForm from './SearchForm';
 import Slider from './Slider';
 
 import './Search.css'

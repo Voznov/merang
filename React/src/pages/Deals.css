@@ -1,0 +1,26 @@
+.deals__type {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 6px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.deals__wrap {
+  width: 50%;
+}
+
+.deals__header {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 54px;
+  text-align: center;
+  color: #7c7c7c;
+}
+
+.deals__active {
+  color: #5207f2;
+  border-bottom: 2px solid #5207f2;
+}
