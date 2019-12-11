@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Deals.css";
+import classNames from "classnames";
 import { getOccupyDeals, getSurrenderDeals } from "../util/APIUtils";
 
 
@@ -25,10 +26,10 @@ class Deals extends Component {
         return <section className="deals__container">
             <div className="deals__type">
                 <div className="deals__wrap deals__occupy" >
-                    <h2 className="deals__header deals__active">Арендую</h2>                 {/* доделаю изменения классов active в зависимости от state */}
+                    <h2 onClick={this.handleOccupyClick} className={classNames('deals__header', { 'deals__active': !this.state.deals })}>Арендую</h2>                 {/* доделаю изменения классов active в зависимости от state */}
                 </div>
                 <div className="deals__wrap deals__surrender">
-                    <h2 className="deals__header">Сдаю</h2>
+                    <h2 onClick={this.handleSurrenderClick} className={classNames('deals__header', { 'deals__active': this.state.deals })}>Сдаю</h2>
                 </div>
             </div>
             <Cards deals_state={this.state.deals} />
@@ -67,3 +68,29 @@ class Card extends Component {
 }
 
 export default Deals;
+
+
+
+// import React from "react";
+// import classNames from "classnames";
+// import Badge from "../Badge";
+//
+// import "./List.scss";
+//
+// const List = ({ items, isRemovable, onClick }) => {
+//   return (
+//     <ul onClick={onClick} className="list">
+//     {items.map((item, index) => (
+//       <li
+//       key={index}
+//       className={classNames(item.className, { active: item.active })}
+//       >
+//       <i>{item.icon ? item.icon : <Badge color={item.color} />}</i>
+//       <span>{item.name}</span>
+//       </li>
+//     ))}
+//     </ul>
+//   );
+// };
+//
+// export default List;
