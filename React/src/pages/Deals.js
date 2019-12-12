@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import "./Deals.css";
 import classNames from "classnames";
+import { Button, Icon, Avatar, Rate } from 'antd';
 import { getOccupyDeals, getSurrenderDeals } from "../util/APIUtils";
 
+import "./Deals.css";
 
 class Deals extends Component {
     constructor(props) {
@@ -26,10 +27,12 @@ class Deals extends Component {
         return <section className="deals__container">
             <div className="deals__type">
                 <div className="deals__wrap deals__occupy" >
-                    <h2 onClick={this.handleOccupyClick} className={classNames('deals__header', { 'deals__active': !this.state.deals })}>Арендую</h2>                 {/* доделаю изменения классов active в зависимости от state */}
+                    <h2 onClick={this.handleOccupyClick}
+                        className={classNames('deals__header', { 'deals__active': !this.state.deals })}>Арендую</h2>                 {/* доделаю изменения классов active в зависимости от state */}
                 </div>
                 <div className="deals__wrap deals__surrender">
-                    <h2 onClick={this.handleSurrenderClick} className={classNames('deals__header', { 'deals__active': this.state.deals })}>Сдаю</h2>
+                    <h2 onClick={this.handleSurrenderClick}
+                        className={classNames('deals__header', { 'deals__active': this.state.deals })}>Сдаю</h2>
                 </div>
             </div>
             <Cards deals_state={this.state.deals} />
@@ -63,14 +66,127 @@ class Card extends Component {
         return <div className="deals__card">
             <div className="deals__card-wrap card">
                 <div className="card__wrap-top">
-                    <img src="../assets/item/b1.jpg" className="card__img" alt="" />
-
-                    <h3>Электроскутер с зарядным устройством</h3>
+                    <img
+                        className="card__img"
+                        alt="logo"
+                        src="https://img.mvideo.ru/Pdb/50049669b.jpg"
+                    />
+                    <div className="card__info-wrap">
+                        <h3 className="card__info-title">Электроскутер с зарядным устройством</h3>
+                        <div className="card__date-price--wrap">
+                            <p className="card__date card__date-begin">16.11 <Icon type="calendar" /></p>
+                            <p className="card__date card__date-end">23.11 <Icon type="calendar" /></p>
+                            <div className="card__price">
+                                <p className="price__sum">3500</p>
+                                <p className="price__day">500</p>
+                            </div>
+                        </div>
+                        <p className="card__info-text">Владелец еще не рассмотрел заявку</p>
+                    </div>
                 </div>
-                <div className="card__wrap-service"></div>
-
+                <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
+                    <Button style={{ color: '#E07676', borderColor: '#E07676', marginRight: '5px' }} ghost>
+                        Отменить
+                    </Button>
+                    <Button style={{ color: '#5207F2', borderColor: '#5207F2', marginRight: '5px', width: '100%' }} icon="message" ghost>
+                        Чат
+                    </Button>
+                    <Button style={{ color: '#5207F2', borderColor: '#5207F2' }} icon="edit" ghost>
+                        Даты
+                    </Button>
+                </div>
             </div>
 
+            <div className="deals__card-wrap card">
+                <div className="card__wrap-top">
+                    <img
+                        className="card__img"
+                        alt="logo"
+                        src="https://img.mvideo.ru/Pdb/50049669b.jpg"
+                    />
+                    <div className="card__info-wrap">
+                        <h3 className="card__info-title">Электроскутер с зарядным устройством</h3>
+                        <div className="card__date-price--wrap">
+                            <p className="card__date card__date-begin">16.11 <Icon type="calendar" /></p>
+                            <p className="card__date card__date-end">23.11 <Icon type="calendar" /></p>
+                            <div className="card__price">
+                                <p className="price__sum">3500</p>
+                                <p className="price__day">500</p>
+                            </div>
+                        </div>
+                        <p className="card__info-text he_said_yes">Бронирование одобрено владельцем</p>
+                    </div>
+                </div>
+                <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
+                    <Button style={{ color: '#E07676', borderColor: '#E07676', marginRight: '5px' }} ghost>
+                        Отменить
+                    </Button>
+                    <Button style={{ color: '#5207F2', borderColor: '#5207F2', marginRight: '5px' }} icon="message" ghost>
+                        Чат
+                    </Button>
+                    <Button type="primary" style={{ width: '100%', borderColor: '#5207F2', background: '#5207F2' }} icon="check">
+                        Подтвердить
+                    </Button>
+                </div>
+            </div>
+
+            <div className="deals__card-wrap card">
+                <div className="card__wrap-top">
+                    <img
+                        className="card__img"
+                        alt="logo"
+                        src="https://img.mvideo.ru/Pdb/50049669b.jpg"
+                    />
+                    <div className="card__info-wrap">
+                        <h3 className="card__info-title">Электроскутер с зарядным устройством</h3>
+                        <p className="card__info-text he_said_no">Владелец отказался от сделки</p>
+                        <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
+                            <Button style={{ color: '#E07676', borderColor: '#E07676', width: '100%' }} ghost>
+                                Удалить запрос
+                    </Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="deals__card-wrap card">
+                <div className="card__wrap-top">
+                    <img
+                        className="card__img"
+                        alt="logo"
+                        src="https://www.gooscooter.com/733-large_default/harley-electric-scooter-1000w-12ah-big-wheel-motorcycle-semnyj-akkumulyator-elektricheskij-skuter.jpg"
+                    />
+                    <div className="card__info-wrap">
+                        <h3 className="card__info-title">Электроскутер с зарядным устройством</h3>
+                        <div className="card__date-price--wrap">
+                            <p className="card__date card__date-begin">16.11 <Icon type="calendar" /></p>
+                            <p className="card__date card__date-end">23.11 <Icon type="calendar" /></p>
+                            <div className="card__price">
+                                <p className="price__sum">3500</p>
+                                <p className="price__day">500</p>
+                            </div>
+                        </div>
+                        <p className="card__info-user">
+                            <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                            <p className="card__info-user--name">Дмитрий К.</p>
+                            <Rate allowHalf defaultValue={3.5} />
+                        </p>
+                    </div>
+                </div>
+                <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
+                    <Button style={{ color: '#E07676', borderColor: '#E07676', marginRight: '5px' }} ghost>
+                        Отменить
+                    </Button>
+                    <Button style={{ color: '#5207F2', borderColor: '#5207F2', marginRight: '5px', width: '100%' }} icon="message" ghost>
+                        Чат
+                    </Button>
+                    <Button style={{ color: '#5207F2', borderColor: '#5207F2' }} icon="edit" ghost>
+                        Даты
+                    </Button>
+                </div>
+            </div>
+
+            <div style={{ height: "100px" }} />
 
         </div>
     }

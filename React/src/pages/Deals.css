@@ -29,21 +29,142 @@
   margin-top: 15px;
 }
 
-.deals__card {
-  height: 200px;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
-}
-
 .deals__card-wrap {
   width: 90%;
   margin: 0 auto;
+  //box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
 }
 
 .card__wrap-top {
+  display: flex;
   padding-top: 10px;
 }
 
 .card__img {
+  margin-right: 10px;
   width: 80px;
   height: 80px;
+  border-radius: 5px;
+}
+
+.card__info-wrap {
+  overflow: hidden;
+}
+
+.card__info-title {
+  width: 200%;
+  height: 26px;
+}
+
+.card__date-price--wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.card__date {
+  position: relative;
+  margin: 0;
+  margin-top: 9px;
+  padding: 3px 7px;
+  font-weight: 300;
+  font-size: 14px;
+  height: 27px;
+  text-align: right;
+  color: #000000;
+  background: #ffffff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.card__date-begin::before {
+  position: absolute;
+  content: "Начало";
+  top: -14px;
+  font-size: 9px;
+  line-height: 11px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.card__date-end::before {
+  position: absolute;
+  content: "Конец";
+  top: -14px;
+  font-size: 9px;
+  line-height: 11px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.card__info-text {
+  margin: 0;
+  padding: 2px;
+  text-align: center;
+  background: #f9f9f9;
+  font-size: 12px;
+  line-height: 14px;
+  color: #7c7c7c;
+}
+
+.card__info-user {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__info-user--name {
+  margin: 0;
+  font-size: 14px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.price__sum {
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+  color: #5207f2;
+  opacity: 0.8;
+}
+
+.price__sum::after {
+  content: " \20BD";
+}
+
+.price__day {
+  margin: 0;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: right;
+  color: #7c7c7c;
+  opacity: 0.8;
+}
+
+.price__day::after {
+  content: " \20BD/день";
+}
+
+.he_said_yes {
+  background: #23d9b7;
+  color: #ffffff;
+}
+
+.he_said_no {
+  background: #e07676;
+  color: #ffffff;
+}
+
+@media (max-width: 360px) {
+  .ant-btn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 335px) {
+  .ant-btn {
+    font-size: 10px;
+  }
 }
