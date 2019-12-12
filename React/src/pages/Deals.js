@@ -46,7 +46,7 @@ class Cards extends Component {
         }
     }
     render() {
-        return <section className="deals--cards">
+        return <section className="deals__cards">
             {this.state.deals ? (
                 <Card />                                //передается с сервера список карточек с арендой
             ) : (
@@ -59,7 +59,16 @@ class Cards extends Component {
 
 class Card extends Component {
     render() {
-        return <div className="deals--cards__card">
+        return <div className="deals__card">
+            <div className="deals__card-wrap card">
+                <div className="card__wrap-top">
+                    <img src="../assets/item/b1.jpg" className="card__img" alt="" />
+
+                    <h3>Электроскутер с зарядным устройством</h3>
+                </div>
+                <div className="card__wrap-service"></div>
+
+            </div>
 
 
         </div>
