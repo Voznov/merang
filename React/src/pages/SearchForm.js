@@ -1,17 +1,31 @@
 import React, { Component } from 'react';
+import { Input } from 'antd'
+// import { Search } from 'Input';
 
 import './SearchForm.css';
 
 class SearchForm extends Component {
   render() {
+    const onChange = e => {
+      console.log(e);
+    };
     return (
       <div className="search-form__wrap">
-        <form>
+
+        <Input.Search
+          className="search-form__input"
+          placeholder="Что вы ищите?"
+          onSearch={value => console.log(value)}
+          allowClear
+          onChange={onChange}
+        />
+
+        {/* <form>
           <input
             className="search-form__input"
             type="text"
             placeholder="Что вы ищите?" />
-        </form>
+        </form> */}
       </div>
     );
   }
