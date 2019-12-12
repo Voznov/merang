@@ -5,3 +5,67 @@
   overflow-x: hidden;
   box-shadow: 5px 5px 8px #f0f1f2;
 }
+
+.ant-spin-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ant-list-split .ant-list-item {
+  border-bottom: none;
+}
+
+.ant-list-item-content {
+  height: 100%;
+}
+
+.ant-list-item {
+  width: 49%;
+}
+
+.ant-list-item:nth-child(odd) {
+  margin-right: 2%;
+}
+
+.item_card {
+  border-radius: 5px;
+}
+
+.ant-card-cover {
+  border-radius: 2px 2px 0px 0px;
+}
+
+.ant-card-cover img {
+  border-radius: 2px 2px 0px 0px;
+}
+
+.ant-card-body {
+  position: relative;
+  padding: 10px;
+}
+
+.anticon {
+  position: absolute;
+  top: -24px;
+}
+
+.anticon:nth-child(2) {
+  left: 30px;
+}
+
+.ant-card-meta-title {
+  font-size: 16px;
+  line-height: 19px;
+  color: #5207f2;
+}
+
+.ant-card-meta-title::after {
+  content: " ₽/день";
+}
+
+.ant-card-meta-description {
+  font-size: 16px;
+  line-height: 19px;
+  color: #7c7c7c;
+  //height: 19px;
+}

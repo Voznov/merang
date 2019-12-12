@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, List } from 'antd';
+import { Card, List, Icon } from 'antd';
 import { API_UPLOADS_URL } from '../constants';
 
 import './ListItem.css'
@@ -40,28 +40,28 @@ class ListItem extends Component {
     return (
       <div>
         <List
-          grid={{
-            gutter: 1,
-            xs: 2,
-            sm: 3,
-            md: 4,
-            lg: 4,
-            xl: 6,
-            xxl: 6,
-          }}
+          // grid={{
+          //   gutter: 1,
+          //   xs: 2,
+          //   sm: 3,
+          //   md: 4,
+          //   lg: 4,
+          //   xl: 6,
+          //   xxl: 6,
+          // }}
           dataSource={products}
           renderItem={item => (
             <List.Item>
               <Card
-                className="item"
+                className="item_card"
                 hoverable
                 cover={<img
                   src={API_UPLOADS_URL + "/" + item.src}
-                  width="156px"
-                  height="156px"
                 />}
               >
-                <Meta title={item.price + " ₽/день"} description={item.name} />
+                <Icon type="heart" style={{ fontSize: '16px', color: '#fff' }} theme="outlined" />
+                <Icon type="star" style={{ fontSize: '16px', color: '#fff' }} />
+                <Meta title={item.price} description={item.name} />
               </Card>
             </List.Item>
           )}
