@@ -60,7 +60,8 @@ class ListItem extends Component {
                 />}
               >
                 <Icon type="heart" style={{ fontSize: '16px', color: '#fff' }} theme="outlined" />
-                <Icon type="star" style={{ fontSize: '16px', color: '#fff' }} />
+                <Icon type="safety-certificate" style={{ fontSize: '16px', color: '#fff' }} />
+                <Icon type="safety-certificate" />
                 <Meta title={item.price} description={item.name} />
               </Card>
             </List.Item>

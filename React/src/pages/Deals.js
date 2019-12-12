@@ -39,9 +39,6 @@ class Deals extends Component {
         </section>
     }
 }
-
-
-
 class Cards extends Component {
     constructor(props) {
         super(props);
@@ -50,107 +47,106 @@ class Cards extends Component {
         }
     }
     render() {
-      const occupy_deals = [
-          {
-              img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
-              title: 'Электроскутер с зарядным устройством',
-              date_begin: '16.11' ,
-              date_end: "23.11",
-              price: "3000",
-              price_per_day: "500",
-              status: true,
-              person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-              person_name: 'Дмитрий К',
-              person_stars: 3.5,
-          },
-          {
-              img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
-              title: 'Электроскутер с зарядным устройством',
-              date_begin: '16.11' ,
-              date_end: "23.11",
-              price: "3000",
-              price_per_day: "500",
-              status: true,
-              person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-              person_name: 'Дмитрий К',
-              person_stars: 3.5,
-          },
-          {
-              img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
-              title: 'Электроскутер с зарядным устройством',
-              date_begin: '16.11' ,
-              date_end: "23.11",
-              price: "3000",
-              price_per_day: "500",
-              status: true,
-              person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-              person_name: 'Дмитрий К',
-              person_stars: 3.5,
-          },
-      ];
+        const occupy_deals = [
+            {
+                img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
+                title: 'Электроскутер с зарядным устройством',
+                date_begin: '16.11',
+                date_end: "23.11",
+                price: "3000",
+                price_per_day: "500",
+                status: true,
+                person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+                person_name: 'Дмитрий К',
+                person_stars: 3.5,
+            },
+            {
+                img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
+                title: 'Электроскутер с зарядным устройством',
+                date_begin: '16.11',
+                date_end: "23.11",
+                price: "3000",
+                price_per_day: "500",
+                status: true,
+                person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+                person_name: 'Дмитрий К',
+                person_stars: 3.5,
+            },
+            {
+                img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
+                title: 'Электроскутер с зарядным устройством',
+                date_begin: '16.11',
+                date_end: "23.11",
+                price: "3000",
+                price_per_day: "500",
+                status: true,
+                person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+                person_name: 'Дмитрий К',
+                person_stars: 3.5,
+            },
+        ];
 
-      const surrender_deals = [
-          {
-              img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
-              title: 'Электроскутер с зарядным устройством',
-              date_begin: '16.11' ,
-              date_end: "23.11",
-              price: "3000",
-              price_per_day: "500",
-              status: true,
-              person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-              person_name: 'Дмитрий К',
-              person_stars: 3.5,
-          },
-          {
-              img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
-              title: 'Электроскутер с зарядным устройством',
-              date_begin: '16.11' ,
-              date_end: "23.11",
-              price: "3000",
-              price_per_day: "500",
-              status: true,
-              person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-              person_name: 'Дмитрий К',
-              person_stars: 3.5,
-          },
-          {
-              img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
-              title: 'Электроскутер с зарядным устройством',
-              date_begin: '16.11' ,
-              date_end: "23.11",
-              price: "3000",
-              price_per_day: "500",
-              status: true,
-              person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-              person_name: 'Дмитрий К',
-              person_stars: 3.5,
-          },
-      ];
+        const surrender_deals = [
+            {
+                img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
+                title: 'Электроскутер с зарядным устройством',
+                date_begin: '16.11',
+                date_end: "23.11",
+                price: "3000",
+                price_per_day: "500",
+                status: true,
+                person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+                person_name: 'Дмитрий К',
+                person_stars: 3.5,
+            },
+            {
+                img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
+                title: 'Электроскутер с зарядным устройством',
+                date_begin: '12.11',
+                date_end: "23.11",
+                price: "4500",
+                price_per_day: "500",
+                status: true,
+                person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+                person_name: 'Дмитрий К',
+                person_stars: 3.5,
+            },
+            {
+                img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
+                title: 'Электроскутер с зарядным устройством',
+                date_begin: '16.11',
+                date_end: "23.11",
+                price: "3000",
+                price_per_day: "500",
+                status: true,
+                person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+                person_name: 'Дмитрий К',
+                person_stars: 4.5,
+            },
+        ];
 
-      const occupy_deals_list = occupy_deals.map((occupy_deal) =>
+        const occupy_deals_list = occupy_deals.map((occupy_deal) =>
             <Card key={occupy_deal.title.toString()}
-            deal={occupy_deal}/>
-          )
+                deal={occupy_deal} />
+        )
 
-      const surrender_deals_list = surrender_deals.map((surrender_deal) =>
+        const surrender_deals_list = surrender_deals.map((surrender_deal) =>
             <Card key={surrender_deal.title.toString()}
-            deal={surrender_deal}/>
-          )
+                deal={surrender_deal} />
+        )
 
-      return <section className="deals__cards">
-            {this.state.deals ? occupy_deals_list : surrender_deals_list})
-            </section>
+        return <section className="deals__cards">
+            {this.state.deals ? occupy_deals_list : surrender_deals_list}
+        </section>
     }
 }
 
-
 class Card extends Component {
     constructor(props) {
-      super(props);
-      this.state = {
-          deal: props.deal
-      }
+        super(props);
+        this.state = {
+            deal: props.deal
+        }
     }
     render() {
         return <div className="deals__card">
@@ -171,11 +167,11 @@ class Card extends Component {
                                 <p className="price__day">{this.state.deal.price_per_day}</p>
                             </div>
                         </div>
-                        {this.state.deal.person_name ?   <p className="card__info-user">
-                              <Avatar src={this.state.deal.person_avatar} />
-                              <p className="card__info-user--name">{this.state.deal.person_name}</p>
-                              <Rate allowHalf defaultValue={this.state.deal.person_stars} />
-                          </p> : null}
+                        {this.state.deal.person_name ? <p className="card__info-user">
+                            <Avatar src={this.state.deal.person_avatar} />
+                            <p className="card__info-user--name">{this.state.deal.person_name}</p>
+                            <Rate allowHalf defaultValue={this.state.deal.person_stars} />
+                        </p> : null}
                         <p className="card__info-text">{this.state.deal.status}</p>
                     </div>
                 </div>
@@ -194,7 +190,7 @@ class Card extends Component {
 
 
 
-            <div style={{ height: "100px" }} />
+            {/* <div style={{ height: "100px" }} /> */}
 
         </div>
     }
