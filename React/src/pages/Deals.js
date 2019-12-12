@@ -50,6 +50,44 @@ class Cards extends Component {
         }
     }
     render() {
+      let occupy_deals = [
+          {
+              img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
+              title: 'Электроскутер с зарядным устройством',
+              date_begin: '16.11' ,
+              date_end: "23.11",
+              price: "3000",
+              price_per_day: "500",
+              status: true,
+              person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+              person_name: 'Дмитрий К',
+              person_stars: 3.5,
+          },
+          {
+              img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
+              title: 'Электроскутер с зарядным устройством',
+              date_begin: '16.11' ,
+              date_end: "23.11",
+              price: "3000",
+              price_per_day: "500",
+              status: true,
+              person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+              person_name: 'Дмитрий К',
+              person_stars: 3.5,
+          },
+          {
+              img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
+              title: 'Электроскутер с зарядным устройством',
+              date_begin: '16.11' ,
+              date_end: "23.11",
+              price: "3000",
+              price_per_day: "500",
+              status: true,
+              person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+              person_name: 'Дмитрий К',
+              person_stars: 3.5,
+          },
+      ];
         return <section className="deals__cards">
             {this.state.deals ? (
                 <Card />                                //передается с сервера список карточек с арендой
@@ -62,6 +100,9 @@ class Cards extends Component {
 
 
 class Card extends Component {
+    constructor(props) {
+      super(props);
+    }
     render() {
         return <div className="deals__card">
             <div className="deals__card-wrap card">
@@ -69,19 +110,19 @@ class Card extends Component {
                     <img
                         className="card__img"
                         alt="logo"
-                        src="https://img.mvideo.ru/Pdb/50049669b.jpg"
+                        src={this.props.img}
                     />
                     <div className="card__info-wrap">
-                        <h3 className="card__info-title">Электроскутер с зарядным устройством</h3>
+                        <h3 className="card__info-title">{this.props.title}</h3>
                         <div className="card__date-price--wrap">
-                            <p className="card__date card__date-begin">16.11 <Icon type="calendar" /></p>
-                            <p className="card__date card__date-end">23.11 <Icon type="calendar" /></p>
+                            <p className="card__date card__date-begin">{this.props.date_begin} <Icon type="calendar" /></p>
+                            <p className="card__date card__date-end">{this.props.date_end}<Icon type="calendar" /></p>
                             <div className="card__price">
-                                <p className="price__sum">3500</p>
-                                <p className="price__day">500</p>
+                                <p className="price__sum">{this.props.price}</p>
+                                <p className="price__day">{this.props.price_per_day}</p>
                             </div>
                         </div>
-                        <p className="card__info-text">Владелец еще не рассмотрел заявку</p>
+                        <p className="card__info-text">{this.props.status}</p>
                     </div>
                 </div>
                 <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
@@ -97,94 +138,7 @@ class Card extends Component {
                 </div>
             </div>
 
-            <div className="deals__card-wrap card">
-                <div className="card__wrap-top">
-                    <img
-                        className="card__img"
-                        alt="logo"
-                        src="https://img.mvideo.ru/Pdb/50049669b.jpg"
-                    />
-                    <div className="card__info-wrap">
-                        <h3 className="card__info-title">Электроскутер с зарядным устройством</h3>
-                        <div className="card__date-price--wrap">
-                            <p className="card__date card__date-begin">16.11 <Icon type="calendar" /></p>
-                            <p className="card__date card__date-end">23.11 <Icon type="calendar" /></p>
-                            <div className="card__price">
-                                <p className="price__sum">3500</p>
-                                <p className="price__day">500</p>
-                            </div>
-                        </div>
-                        <p className="card__info-text he_said_yes">Бронирование одобрено владельцем</p>
-                    </div>
-                </div>
-                <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
-                    <Button style={{ color: '#E07676', borderColor: '#E07676', marginRight: '5px' }} ghost>
-                        Отменить
-                    </Button>
-                    <Button style={{ color: '#5207F2', borderColor: '#5207F2', marginRight: '5px' }} icon="message" ghost>
-                        Чат
-                    </Button>
-                    <Button type="primary" style={{ width: '100%', borderColor: '#5207F2', background: '#5207F2' }} icon="check">
-                        Подтвердить
-                    </Button>
-                </div>
-            </div>
 
-            <div className="deals__card-wrap card">
-                <div className="card__wrap-top">
-                    <img
-                        className="card__img"
-                        alt="logo"
-                        src="https://img.mvideo.ru/Pdb/50049669b.jpg"
-                    />
-                    <div className="card__info-wrap">
-                        <h3 className="card__info-title">Электроскутер с зарядным устройством</h3>
-                        <p className="card__info-text he_said_no">Владелец отказался от сделки</p>
-                        <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
-                            <Button style={{ color: '#E07676', borderColor: '#E07676', width: '100%' }} ghost>
-                                Удалить запрос
-                    </Button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="deals__card-wrap card">
-                <div className="card__wrap-top">
-                    <img
-                        className="card__img"
-                        alt="logo"
-                        src="https://www.gooscooter.com/733-large_default/harley-electric-scooter-1000w-12ah-big-wheel-motorcycle-semnyj-akkumulyator-elektricheskij-skuter.jpg"
-                    />
-                    <div className="card__info-wrap">
-                        <h3 className="card__info-title">Электроскутер с зарядным устройством</h3>
-                        <div className="card__date-price--wrap">
-                            <p className="card__date card__date-begin">16.11 <Icon type="calendar" /></p>
-                            <p className="card__date card__date-end">23.11 <Icon type="calendar" /></p>
-                            <div className="card__price">
-                                <p className="price__sum">3500</p>
-                                <p className="price__day">500</p>
-                            </div>
-                        </div>
-                        <p className="card__info-user">
-                            <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                            <p className="card__info-user--name">Дмитрий К.</p>
-                            <Rate allowHalf defaultValue={3.5} />
-                        </p>
-                    </div>
-                </div>
-                <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
-                    <Button style={{ color: '#E07676', borderColor: '#E07676', marginRight: '5px' }} ghost>
-                        Отменить
-                    </Button>
-                    <Button style={{ color: '#5207F2', borderColor: '#5207F2', marginRight: '5px', width: '100%' }} icon="message" ghost>
-                        Чат
-                    </Button>
-                    <Button style={{ color: '#5207F2', borderColor: '#5207F2' }} icon="edit" ghost>
-                        Даты
-                    </Button>
-                </div>
-            </div>
 
             <div style={{ height: "100px" }} />
 
@@ -219,3 +173,95 @@ export default Deals;
 // };
 //
 // export default List;
+
+
+
+
+// <div className="deals__card-wrap card">
+//     <div className="card__wrap-top">
+//         <img
+//             className="card__img"
+//             alt="logo"
+//             src="https://img.mvideo.ru/Pdb/50049669b.jpg"
+//         />
+//         <div className="card__info-wrap">
+//             <h3 className="card__info-title">Электроскутер с зарядным устройством</h3>
+//             <div className="card__date-price--wrap">
+//                 <p className="card__date card__date-begin">16.11 <Icon type="calendar" /></p>
+//                 <p className="card__date card__date-end">23.11 <Icon type="calendar" /></p>
+//                 <div className="card__price">
+//                     <p className="price__sum">3500</p>
+//                     <p className="price__day">500</p>
+//                 </div>
+//             </div>
+//             <p className="card__info-text he_said_yes">Бронирование одобрено владельцем</p>
+//         </div>
+//     </div>
+//     <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
+//         <Button style={{ color: '#E07676', borderColor: '#E07676', marginRight: '5px' }} ghost>
+//             Отменить
+//         </Button>
+//         <Button style={{ color: '#5207F2', borderColor: '#5207F2', marginRight: '5px' }} icon="message" ghost>
+//             Чат
+//         </Button>
+//         <Button type="primary" style={{ width: '100%', borderColor: '#5207F2', background: '#5207F2' }} icon="check">
+//             Подтвердить
+//         </Button>
+//     </div>
+// </div>
+//
+// <div className="deals__card-wrap card">
+//     <div className="card__wrap-top">
+//         <img
+//             className="card__img"
+//             alt="logo"
+//             src="https://img.mvideo.ru/Pdb/50049669b.jpg"
+//         />
+//         <div className="card__info-wrap">
+//             <h3 className="card__info-title">Электроскутер с зарядным устройством</h3>
+//             <p className="card__info-text he_said_no">Владелец отказался от сделки</p>
+//             <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
+//                 <Button style={{ color: '#E07676', borderColor: '#E07676', width: '100%' }} ghost>
+//                     Удалить запрос
+//                 </Button>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// <div className="deals__card-wrap card">
+//     <div className="card__wrap-top">
+//         <img
+//             className="card__img"
+//             alt="logo"
+//             src="https://www.gooscooter.com/733-large_default/harley-electric-scooter-1000w-12ah-big-wheel-motorcycle-semnyj-akkumulyator-elektricheskij-skuter.jpg"
+//         />
+//         <div className="card__info-wrap">
+//             <h3 className="card__info-title">Электроскутер с зарядным устройством</h3>
+//             <div className="card__date-price--wrap">
+//                 <p className="card__date card__date-begin">16.11 <Icon type="calendar" /></p>
+//                 <p className="card__date card__date-end">23.11 <Icon type="calendar" /></p>
+//                 <div className="card__price">
+//                     <p className="price__sum">3500</p>
+//                     <p className="price__day">500</p>
+//                 </div>
+//             </div>
+//             <p className="card__info-user">
+//                 <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+//                 <p className="card__info-user--name">Дмитрий К.</p>
+//                 <Rate allowHalf defaultValue={3.5} />
+//             </p>
+//         </div>
+//     </div>
+//     <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
+//         <Button style={{ color: '#E07676', borderColor: '#E07676', marginRight: '5px' }} ghost>
+//             Отменить
+//         </Button>
+//         <Button style={{ color: '#5207F2', borderColor: '#5207F2', marginRight: '5px', width: '100%' }} icon="message" ghost>
+//             Чат
+//         </Button>
+//         <Button style={{ color: '#5207F2', borderColor: '#5207F2' }} icon="edit" ghost>
+//             Даты
+//         </Button>
+//     </div>
+// </div>
