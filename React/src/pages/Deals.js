@@ -50,7 +50,7 @@ class Cards extends Component {
         }
     }
     render() {
-      let occupy_deals = [
+      const occupy_deals = [
           {
               img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
               title: 'Электроскутер с зарядным устройством',
@@ -88,13 +88,59 @@ class Cards extends Component {
               person_stars: 3.5,
           },
       ];
-        return <section className="deals__cards">
-            {this.state.deals ? (
-                <Card />                                //передается с сервера список карточек с арендой
-            ) : (
-                    <Card />                                 // либо список карточек со сдачей (сам список доделаю)
-                )}
-        </section>
+
+      const surrender_deals = [
+          {
+              img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
+              title: 'Электроскутер с зарядным устройством',
+              date_begin: '16.11' ,
+              date_end: "23.11",
+              price: "3000",
+              price_per_day: "500",
+              status: true,
+              person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+              person_name: 'Дмитрий К',
+              person_stars: 3.5,
+          },
+          {
+              img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
+              title: 'Электроскутер с зарядным устройством',
+              date_begin: '16.11' ,
+              date_end: "23.11",
+              price: "3000",
+              price_per_day: "500",
+              status: true,
+              person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+              person_name: 'Дмитрий К',
+              person_stars: 3.5,
+          },
+          {
+              img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
+              title: 'Электроскутер с зарядным устройством',
+              date_begin: '16.11' ,
+              date_end: "23.11",
+              price: "3000",
+              price_per_day: "500",
+              status: true,
+              person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+              person_name: 'Дмитрий К',
+              person_stars: 3.5,
+          },
+      ];
+
+      const occupy_deals_list = occupy_deals.map((occupy_deal) =>
+            <Card key={occupy_deal.title.toString()}
+            deal={occupy_deal}/>
+          )
+
+      const surrender_deals_list = surrender_deals.map((surrender_deal) =>
+            <Card key={surrender_deal.title.toString()}
+            deal={surrender_deal}/>
+          )
+
+      return <section className="deals__cards">
+            {this.state.deals ? occupy_deals_list : surrender_deals_list})
+            </section>
     }
 }
 
@@ -102,6 +148,9 @@ class Cards extends Component {
 class Card extends Component {
     constructor(props) {
       super(props);
+      this.state = {
+          deal: props.deal
+      }
     }
     render() {
         return <div className="deals__card">
@@ -110,19 +159,24 @@ class Card extends Component {
                     <img
                         className="card__img"
                         alt="logo"
-                        src={this.props.img}
+                        src={this.state.deal.img}
                     />
                     <div className="card__info-wrap">
-                        <h3 className="card__info-title">{this.props.title}</h3>
+                        <h3 className="card__info-title">{this.state.deal.title}</h3>
                         <div className="card__date-price--wrap">
-                            <p className="card__date card__date-begin">{this.props.date_begin} <Icon type="calendar" /></p>
-                            <p className="card__date card__date-end">{this.props.date_end}<Icon type="calendar" /></p>
+                            <p className="card__date card__date-begin">{this.state.deal.date_begin} <Icon type="calendar" /></p>
+                            <p className="card__date card__date-end">{this.state.deal.date_end}<Icon type="calendar" /></p>
                             <div className="card__price">
-                                <p className="price__sum">{this.props.price}</p>
-                                <p className="price__day">{this.props.price_per_day}</p>
+                                <p className="price__sum">{this.state.deal.price}</p>
+                                <p className="price__day">{this.state.deal.price_per_day}</p>
                             </div>
                         </div>
-                        <p className="card__info-text">{this.props.status}</p>
+                        {this.state.deal.person_name ?   <p className="card__info-user">
+                              <Avatar src={this.state.deal.person_avatar} />
+                              <p className="card__info-user--name">{this.state.deal.person_name}</p>
+                              <Rate allowHalf defaultValue={this.state.deal.person_stars} />
+                          </p> : null}
+                        <p className="card__info-text">{this.state.deal.status}</p>
                     </div>
                 </div>
                 <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
