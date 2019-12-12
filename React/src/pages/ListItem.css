@@ -44,12 +44,14 @@
   padding: 10px;
 }
 
-.anticon {
+.anticon-heart {
   position: absolute;
   top: -24px;
 }
 
-.anticon:nth-child(2) {
+.anticon-star {
+  position: absolute;
+  top: -24px;
   left: 30px;
 }
 
