@@ -24,33 +24,31 @@ class Deals extends Component {
     }
 
     render() {
+        let actual_deals = this.state.deals;
         return <section className="deals__container">
             <div className="deals__type">
                 <div className="deals__wrap deals__occupy" >
                     <h2 onClick={this.handleOccupyClick}
-                        className={classNames('deals__header', { 'deals__active': !this.state.deals })}>Арендую</h2>                 {/* доделаю изменения классов active в зависимости от state */}
+                        className={classNames('deals__header', { 'deals__active': !actual_deals })}>Арендую</h2>                 {/* доделаю изменения классов active в зависимости от state */}
                 </div>
                 <div className="deals__wrap deals__surrender">
                     <h2 onClick={this.handleSurrenderClick}
-                        className={classNames('deals__header', { 'deals__active': this.state.deals })}>Сдаю</h2>
+                        className={classNames('deals__header', { 'deals__active': actual_deals })}>Сдаю</h2>
                 </div>
             </div>
-            <Cards deals_state={this.state.deals} />
+            <Cards deals_state={actual_deals} />
         </section>
     }
 }
 class Cards extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            deals: props.deals_state      //в пропсе передается состояние сделок: арендует(true) или сдает(false)
-        }
     }
     render() {
         const occupy_deals = [
             {
                 img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
-                title: 'Электроскутер с зарядным устройством',
+                title: 'Дрель',
                 date_begin: '16.11',
                 date_end: "23.11",
                 price: "3000",
@@ -62,19 +60,16 @@ class Cards extends Component {
             },
             {
                 img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
-                title: 'Электроскутер с зарядным устройством',
+                title: 'Ноутбук',
                 date_begin: '16.11',
                 date_end: "23.11",
                 price: "3000",
                 price_per_day: "500",
-                status: true,
-                person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-                person_name: 'Дмитрий К',
-                person_stars: 3.5,
+                status: true
             },
             {
                 img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
-                title: 'Электроскутер с зарядным устройством',
+                title: 'Электроскутер',
                 date_begin: '16.11',
                 date_end: "23.11",
                 price: "3000",
@@ -94,31 +89,27 @@ class Cards extends Component {
                 date_end: "23.11",
                 price: "3000",
                 price_per_day: "500",
-                status: true,
+                status_ready: {status:false},
                 person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
                 person_name: 'Дмитрий К',
                 person_stars: 3.5,
             },
             {
                 img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
-                title: 'Электроскутер с зарядным устройством',
+                title: 'Фотоаппарат',
                 date_begin: '12.11',
                 date_end: "23.11",
                 price: "4500",
                 price_per_day: "500",
-                status: true,
-                person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-                person_name: 'Дмитрий К',
-                person_stars: 3.5,
             },
             {
                 img: "https://img.mvideo.ru/Pdb/50049669b.jpg",
-                title: 'Электроскутер с зарядным устройством',
+                title: 'Самокат',
                 date_begin: '16.11',
                 date_end: "23.11",
-                price: "3000",
-                price_per_day: "500",
-                status: true,
+                price: "3100",
+                price_per_day: "400",
+                status_ready: {status:true},
                 person_avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
                 person_name: 'Дмитрий К',
                 person_stars: 4.5,
@@ -136,7 +127,7 @@ class Cards extends Component {
         )
 
         return <section className="deals__cards">
-            {this.state.deals ? occupy_deals_list : surrender_deals_list}
+            {this.props.deals_state ? occupy_deals_list : surrender_deals_list}
         </section>
     }
 }
@@ -149,33 +140,50 @@ class Card extends Component {
         }
     }
     render() {
+        let deal = this.state.deal;
         return <div className="deals__card">
             <div className="deals__card-wrap card">
                 <div className="card__wrap-top">
                     <img
                         className="card__img"
                         alt="logo"
-                        src={this.state.deal.img}
+                        src={deal.img}
                     />
                     <div className="card__info-wrap">
-                        <h3 className="card__info-title">{this.state.deal.title}</h3>
+                        <h3 className="card__info-title">{deal.title}</h3>
                         <div className="card__date-price--wrap">
-                            <p className="card__date card__date-begin">{this.state.deal.date_begin} <Icon type="calendar" /></p>
-                            <p className="card__date card__date-end">{this.state.deal.date_end}<Icon type="calendar" /></p>
+                            <p className="card__date card__date-begin">{deal.date_begin} <Icon type="calendar" /></p>
+                            <p className="card__date card__date-end">{deal.date_end}<Icon type="calendar" /></p>
                             <div className="card__price">
-                                <p className="price__sum">{this.state.deal.price}</p>
-                                <p className="price__day">{this.state.deal.price_per_day}</p>
+                                <p className="price__sum">{deal.price}</p>
+                                <p className="price__day">{deal.price_per_day}</p>
                             </div>
                         </div>
-                        {this.state.deal.person_name ? <p className="card__info-user">
-                            <Avatar src={this.state.deal.person_avatar} />
-                            <p className="card__info-user--name">{this.state.deal.person_name}</p>
-                            <Rate allowHalf defaultValue={this.state.deal.person_stars} />
+                        {deal.person_name ? <p className="card__info-user">
+                            <Avatar src={deal.person_avatar} />
+                            <p className="card__info-user--name">{deal.person_name}</p>
+                            <Rate allowHalf defaultValue={deal.person_stars} />
                         </p> : null}
-                        <p className="card__info-text">{this.state.deal.status}</p>
+                        {deal.status_ready ? deal.status_ready.status ? <p className="card__info-text he_said_yes">Бронирование одобрено владельцем</p> : <p className="card__info-text he_said_no">Владелец отказался от сделки</p> : null}
                     </div>
                 </div>
-                <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
+
+                {deal.status_ready ? deal.status_ready.status ?
+                  <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
+                      <Button style={{ color: '#E07676', borderColor: '#E07676', marginRight: '5px' }} ghost>
+                          Отменить
+                      </Button>
+                      <Button style={{ color: '#5207F2', borderColor: '#5207F2', marginRight: '5px' }} icon="message" ghost>
+                          Чат
+                      </Button>
+                      <Button type="primary" style={{ width: '100%', borderColor: '#5207F2', background: '#5207F2' }} icon="check">
+                          Подтвердить
+                      </Button>
+                  </div> : <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
+                      <Button style={{ color: '#E07676', borderColor: '#E07676', width: '100%' }} ghost>
+                          Удалить запрос
+                      </Button>
+                  </div> : <div className="card__wrap-service" style={{ marginTop: '10px', paddingBottom: '15px', display: 'flex' }}>
                     <Button style={{ color: '#E07676', borderColor: '#E07676', marginRight: '5px' }} ghost>
                         Отменить
                     </Button>
@@ -185,7 +193,8 @@ class Card extends Component {
                     <Button style={{ color: '#5207F2', borderColor: '#5207F2' }} icon="edit" ghost>
                         Даты
                     </Button>
-                </div>
+                </div>}
+
             </div>
 
 
