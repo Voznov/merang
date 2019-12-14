@@ -1,6 +1,6 @@
 .search-form__wrap {
   border-top: none;
-  box-shadow: 0 6px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .search-form {

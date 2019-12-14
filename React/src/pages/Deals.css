@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  box-shadow: 0 6px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .deals__wrap {
@@ -49,6 +49,7 @@
 
 .card__info-wrap {
   overflow: hidden;
+  width: 100%;
 }
 
 .card__info-title {
