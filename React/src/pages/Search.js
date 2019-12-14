@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Item from './Item';
 import ListItem from './ListItem';
 import Slider from './Slider';
 
@@ -48,6 +49,8 @@ class Search extends Component {
             products.length != 0
                 ? <div>
                     {<ListItem />}
+
+                    {/* <Item /> */}
 
                     {/* <Slider /> */}
 

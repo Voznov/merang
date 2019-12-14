@@ -1,0 +1,114 @@
+.item__img {
+  width: 100%;
+}
+
+.item__title {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.item__price-wrap {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  padding: 10px 0 27px 0;
+  background: #f9f9f9;
+}
+
+.item__price {
+  position: relative;
+  margin: 0;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  color: #5207f2;
+}
+
+.item__price::before {
+  content: "\20BD ";
+}
+
+.item__price-day::after {
+  position: absolute;
+  content: "в день ";
+  left: 0;
+  bottom: -16px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #7c7c7c;
+}
+
+.item__price-week::after {
+  position: absolute;
+  content: "в неделю ";
+  left: 0;
+  bottom: -16px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #7c7c7c;
+}
+
+.item__price-month::after {
+  position: absolute;
+  content: "в месяц ";
+  left: 0;
+  bottom: -16px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #7c7c7c;
+}
+
+.item__deposit {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.item__deposit::before {
+  content: "Страховой депозит ";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #7c7c7c;
+}
+
+.item__deposit::after {
+  content: " \20BD";
+}
+
+.item__address {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #7c7c7c;
+}
+
+.item__map {
+  margin-top: 15px;
+  border-top: 1px solid #7c7c7c;
+  background-image: url("../assets/item/map1.jpg");
+  background-position: 50% 50%;
+  width: 100%;
+  height: 260px;
+}
+
+.item__reservation {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.item__reservation-wrap {
+  width: 90%;
+}

@@ -16,6 +16,7 @@ import Greeting from '../pages/Greeting';
 import Profile from '../pages/Profile';
 import Search from '../pages/Search';
 import Deals from '../pages/Deals';
+import Item from '../pages/Item';
 import SearchForm from '../pages/SearchForm';
 
 import { Layout, notification, Table } from 'antd';
@@ -150,6 +151,7 @@ class App extends Component {
               </Route>
               <Route path="/liked">
                 {/* LIKED */}
+                <Item />
               </Route>
               <Route path="/users/:username" render={
                 (props) => <Profile isAuthenticated={this.state.isAuthenticated} currentUser={this.state.currentUser} onLogout={this.handleLogout} {...props} />
