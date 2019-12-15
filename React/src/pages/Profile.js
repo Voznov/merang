@@ -4,10 +4,11 @@ import { Avatar, List } from 'antd';
 import { getAvatarColor } from '../util/Colors';
 import { formatDate } from '../util/Helpers';
 import LoadingIndicator from '../common/LoadingIndicator';
-import './Profile.css';
 import NotFound from '../common/NotFound';
 import ServerError from '../common/ServerError';
 import { APP_VERSION } from '../constants';
+
+import './Profile.css';
 
 class Profile extends Component {
     constructor(props) {
@@ -72,7 +73,27 @@ class Profile extends Component {
 
         let menuItems = [
             {
-                text: 'Выйти',
+                text: 'Мои вещи',
+                onClick: (() => this.props.onLogout()),
+                className: 'my-stuff-button'
+            },
+            {
+                text: 'История сделок',
+                onClick: (() => this.props.onLogout()),
+                className: 'transaction-history-button'
+            },
+            {
+                text: 'Отзывы',
+                onClick: (() => this.props.onLogout()),
+                className: 'reviews-button'
+            },
+            {
+                text: 'Помощь',
+                onClick: (() => this.props.onLogout()),
+                className: 'help-button'
+            },
+            {
+                text: 'Выйти из аккаунта',
                 onClick: (() => this.props.onLogout()),
                 className: 'logout-button'
             }
@@ -95,21 +116,21 @@ class Profile extends Component {
                                 </div>
                             </div>
                             {this.props.currentUser.name == this.state.user.name ? (
-                                <div>
+                                <div className="profile-list">
                                     <List
                                         className="list"
                                         bordered={false}
                                         itemLayout="horizontal"
                                         dataSource={menuItems}
                                         renderItem={item => (
-                                            <List.Item onClick={item.onClick} >
-                                            <div style={{display: "table"}}>
+                                            <List.Item onClick={item.onClick} className='list-item-profile'>
+                                                <div>
                                                     <div className={item.className + " list-item"} >{item.text}</div>
                                                 </div>
                                             </List.Item>
                                         )}
                                     />
-                                    <div style={{display: "table"}}>
+                                    <div style={{ display: "table" }}>
                                         <div className="version list-item">Версия: {APP_VERSION}</div>
                                     </div>
                                 </div>

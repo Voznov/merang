@@ -24,6 +24,24 @@
   left: 0 !important;
 }
 
+.list .ant-spin-container {
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.ant-spin-container .ant-list-item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.profile-list .ant-spin-container .list-item-profile {
+  width: 100%;
+  cursor: pointer;
+  border-bottom: 1px solid #dfdfdf;
+}
+
 .user-summary {
   text-align: center;
   padding-top: 20px;
