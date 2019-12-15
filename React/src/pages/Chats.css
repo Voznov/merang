@@ -1,0 +1,118 @@
+.chats__type {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 6px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.chats__wrap {
+  width: 50%;
+}
+
+.chats__header {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 54px;
+  text-align: center;
+  color: #7c7c7c;
+}
+
+.chats__active {
+  color: #5207f2;
+  border-bottom: 2px solid #5207f2;
+}
+
+.chats__list {
+  margin-top: 15px;
+}
+
+.chat__item {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 1px solid #dadada;
+}
+
+.chat__img {
+  margin: 15px 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.chat__images {
+  width: 80px;
+  position: relative;
+}
+
+.chat__item .chat__badge {
+  position: absolute;
+  top: 4px;
+  right: -8px;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.chat__description {
+  width: 100%;
+  margin-left: 15px;
+}
+
+.chat__item-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.chat__name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.chat__date {
+  margin: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #7c7c7c;
+}
+
+.chat__item-title {
+  width: 200%;
+  height: 17px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  overflow: hidden;
+}
+
+.chat__cost {
+  width: 126px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  color: #5207f2;
+}
+
+.chat__cost::after {
+  content: " \20BD/д";
+}
+
+.chat__last-message {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #7c7c7c;
+}

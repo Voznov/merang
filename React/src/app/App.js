@@ -17,6 +17,7 @@ import Profile from '../pages/Profile';
 import Search from '../pages/Search';
 import Deals from '../pages/Deals';
 import Item from '../pages/Item';
+import Chats from '../pages/Chats';
 import SearchForm from '../pages/SearchForm';
 
 import { Layout, notification, Table } from 'antd';
@@ -141,7 +142,7 @@ class App extends Component {
                 <Redirect to="/search" />
               </Route>
               <Route path="/chat">
-                {/* CHAT */}
+                <Chats />
               </Route>
               <Route path="/offer">
                 <Deals />
