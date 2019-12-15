@@ -57,6 +57,7 @@ class ListItem extends Component {
                 hoverable
                 cover={<img
                   src={API_UPLOADS_URL + "/" + item.src}
+                  alt={item.name}
                 />}
               >
                 <Icon type="heart" style={{ fontSize: '16px', color: '#fff' }} theme="outlined" />

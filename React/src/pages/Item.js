@@ -1,5 +1,45 @@
 import React, { Component } from 'react';
-import { Carousel, Icon, Button } from 'antd';
+import { Carousel, Icon, Button, Avatar, Rate } from 'antd';
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  TelegramShareButton,
+  WhatsappShareButton,
+  PinterestShareButton,
+  VKShareButton,
+  OKShareButton,
+  RedditShareButton,
+  TumblrShareButton,
+  LivejournalShareButton,
+  MailruShareButton,
+  ViberShareButton,
+  WorkplaceShareButton,
+  LineShareButton,
+  PocketShareButton,
+  InstapaperShareButton,
+  EmailShareButton,
+
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  PinterestIcon,
+  VKIcon,
+  OKIcon,
+  TelegramIcon,
+  WhatsappIcon,
+  RedditIcon,
+  TumblrIcon,
+  MailruIcon,
+  EmailIcon,
+  LivejournalIcon,
+  ViberIcon,
+  WorkplaceIcon,
+  LineIcon,
+  PocketIcon,
+  InstapaperIcon,
+
+} from 'react-share';
 
 import "./Item.css";
 
@@ -44,11 +84,110 @@ class Item extends Component {
         <div className="item__map">
           <div className="item__reservation">
             <div className="item__reservation-wrap">
-              <Button type="primary" style={{ width: '100%', marginTop: '15px', marginBottom: '15px' }}>Редактировать</Button>
+              {/* <Button type="primary" style={{ width: '100%', marginTop: '15px', marginBottom: '15px' }}>Редактировать</Button> */}
 
-              <Button type="primary" style={{ width: '50%', marginTop: '15px', marginBottom: '15px' }}>Забронировать</Button>
+              <div className="item__reservation-wrap cost-metro">
+                <p className="item__reservation-cost">550</p>
+                <p className="item__reservation-metro">Василеостровская</p>
+              </div>
+              <Button type="primary" style={{ width: '49%', marginTop: '15px', marginBottom: '15px' }}>Забронировать</Button>
             </div>
           </div>
+        </div>
+        <div className="item__description">
+          <h2 className="item__description-title">Описание</h2>
+          <p className="item__description-text">Самокат очень быстрый и проходимый. Подойдет для прогулки как в парке, так и в городе. Максимальная скорость 35 км/ч. Заряда хватает обычно примерно на 5 часов. Полностью заряжается за 2-3 часа.
+Обращайтесь! ;)</p>
+        </div>
+        <div className="item__owner">
+          <Avatar
+            style={{ width: '111px', height: '80px', margin: '15px 15px 15px 0' }}
+            src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          <div className="item__owner-wrap">
+            <p className="item__owner-name">Дмитрий К.</p>
+            <div className="item__owner-rate">
+              <Rate allowHalf defaultValue={4.3} />
+              <p className="item__owner-number">4.3 / 5</p>
+            </div>
+            <Button type="primary" ghost="true" style={{ width: '100%' }}>Написать сообщение</Button>
+          </div>
+        </div>
+        <ul className="item__stat">
+          <li className="item__stat-list">Опубликовано<span>20 ноября 2019</span></li>
+          <li className="item__stat-list">Просмотров<span>1207</span></li>
+          <li className="item__stat-list">В избранном<span>16</span></li>
+        </ul>
+        <div className="item__share">
+          <h2 className="item__share-title">Поделиться</h2>
+          <div className="item__share-wrap">
+            <VKShareButton
+              // url={shareUrl}
+              // quote={title}
+              className="Demo__some-network__share-button">
+              <VKIcon
+                size={32}
+                round />
+            </VKShareButton>
+            <OKShareButton
+              // url={shareUrl}
+              // quote={title}
+              className="Demo__some-network__share-button">
+              <OKIcon
+                size={32}
+                round />
+            </OKShareButton>
+            <FacebookShareButton
+              // url={shareUrl}
+              // quote={title}
+              className="Demo__some-network__share-button">
+              <FacebookIcon
+                size={32}
+                round />
+            </FacebookShareButton>
+            <WhatsappShareButton
+              // url={shareUrl}
+              // quote={title}
+              className="Demo__some-network__share-button">
+              <WhatsappIcon
+                size={32}
+                round />
+            </WhatsappShareButton>
+            <ViberShareButton
+              // url={shareUrl}
+              // quote={title}
+              className="Demo__some-network__share-button">
+              <ViberIcon
+                size={32}
+                round />
+            </ViberShareButton>
+            <TelegramShareButton
+              // url={shareUrl}
+              // quote={title}
+              className="Demo__some-network__share-button">
+              <TelegramIcon
+                size={32}
+                round />
+            </TelegramShareButton>
+            <TwitterShareButton
+              // url={shareUrl}
+              // quote={title}
+              className="Demo__some-network__share-button">
+              <TwitterIcon
+                size={32}
+                round />
+            </TwitterShareButton>
+            <EmailShareButton
+              // url={shareUrl}
+              // quote={title}
+              className="Demo__some-network__share-button">
+              <EmailIcon
+                size={32}
+                round />
+            </EmailShareButton>
+          </div>
+        </div>
+        <div style={{ height: '100px' }}>
+
         </div>
       </div>
     );

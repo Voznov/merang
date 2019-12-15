@@ -97,11 +97,11 @@
 
 .item__map {
   margin-top: 15px;
-  border-top: 1px solid #7c7c7c;
+  border-top: 1px solid #dfdfdf;
   background-image: url("../assets/item/map1.jpg");
   background-position: 50% 50%;
   width: 100%;
-  height: 260px;
+  height: 160px;
 }
 
 .item__reservation {
@@ -111,4 +111,139 @@
 
 .item__reservation-wrap {
   width: 90%;
+  margin: auto;
+  display: flex;
+}
+
+.item__reservation-wrap .cost-metro {
+  width: 49%;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item__reservation-cost {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #5207f2;
+}
+
+.item__reservation-cost::after {
+  content: " \20BD/день";
+}
+
+.item__reservation-metro {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #7c7c7c;
+}
+
+.item__reservation-metro::before {
+  content: "м. "; /* потом доделать https://blog.lftechnology.com/using-svg-icons-components-in-react-44fbe8e5f91 */
+}
+
+.item__description {
+  margin-top: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.item__description-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #7c7c7c;
+}
+
+.item__description-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.item__owner {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.item__owner-wrap {
+  width: 100%;
+}
+
+.item__owner-name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.item__owner-rate {
+  display: flex;
+  align-items: center;
+}
+
+.item__owner-number {
+  margin: 0;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.item__stat {
+  list-style: none;
+  width: 90%;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #7c7c7c;
+}
+
+.item__stat-list {
+  margin-bottom: 15px;
+}
+
+.item__stat-list span {
+  margin-bottom: 15px;
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.item__share {
+  background: #e5e5e5;
+}
+
+.item__share-title {
+  margin: 0;
+  padding-top: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #7c7c7c;
+}
+
+.item__share-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding-bottom: 45px;
 }
