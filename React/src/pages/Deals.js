@@ -29,7 +29,7 @@ class Deals extends Component {
             <div className="deals__type">
                 <div className="deals__wrap deals__occupy" >
                     <h2 onClick={this.handleOccupyClick}
-                        className={classNames('deals__header', { 'deals__active': !actual_deals })}>Арендую</h2>                 {/* доделаю изменения классов active в зависимости от state */}
+                        className={classNames('deals__header', { 'deals__active': !actual_deals })}>Арендую</h2>                 
                 </div>
                 <div className="deals__wrap deals__surrender">
                     <h2 onClick={this.handleSurrenderClick}
