@@ -61,7 +61,7 @@ class Cards extends Component {
             },
             {
               img: "https://i.pinimg.com/originals/40/6d/fb/406dfba686da73abe5d620b10e600785.png",
-              count: 4,
+              count: 44,
               date: '12.11.2019',
               title: "Самокат",
               price: "550",

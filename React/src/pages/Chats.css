@@ -98,7 +98,7 @@
 }
 
 .chat__cost {
-  width: 126px;
+  //width: 126px;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
@@ -107,7 +107,7 @@
 }
 
 .chat__cost::after {
-  content: " \20BD/д";
+  content: "\20BD/д";
 }
 
 .chat__last-message {
