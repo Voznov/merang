@@ -74,7 +74,13 @@ class Item extends Component {
               src="https://i2.rozetka.ua/goods/1851278/xiaomi_mi_scooter_m365_black_images_1851278654.jpg" />
           </div>
         </Carousel>
-        <h1 className="item__title">Электроскутер с зарядным устройством</h1>
+        <div className="item__like-wrap">
+          <h1 className="item__title">Электроскутер с зарядным устройством</h1>
+          <div className="item__like">
+            <Icon className="item__like-icon" type="heart" theme="filled" style={{ color: '#E07676' }}/>
+            {/* <Icon type="smile" theme="outlined" /> */}
+          </div>
+        </div>
         <div className="item__price-wrap">
           <p className="item__price  item__price-day">550</p>
           <p className="item__price  item__price-week">3700</p>
