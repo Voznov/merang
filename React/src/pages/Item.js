@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Carousel, Icon, Button, Avatar, Rate } from 'antd';
+import { YMaps, Map } from 'react-yandex-maps';
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -81,19 +82,23 @@ class Item extends Component {
         </div>
         <p className="item__deposit">5000</p>
         <p className="item__address"> <Icon type="environment" style={{ fontSize: '24px', marginRight: '10px', color: '#5207F2' }} /> Санкт-Петербург, м. Василеостровская, 12 линия В. О., 51</p>
-        <div className="item__map">
-          <div className="item__reservation">
-            <div className="item__reservation-wrap">
-              {/* <Button type="primary" style={{ width: '100%', marginTop: '15px', marginBottom: '15px' }}>Редактировать</Button> */}
+        <YMaps>
+          <div className="item__map">
+            <Map defaultState={{ center: [59.946189, 30.265652], zoom: 16 }} width={'100 %'} height={'160px'} />
+          </div>
+        </YMaps>
+        <div className="item__reservation">
+          <div className="item__reservation-wrap">
+            {/* <Button type="primary" style={{ width: '100%', marginTop: '15px', marginBottom: '15px' }}>Редактировать</Button> */}
 
-              <div className="item__reservation-wrap cost-metro">
-                <p className="item__reservation-cost">550</p>
-                <p className="item__reservation-metro">Василеостровская</p>
-              </div>
-              <Button type="primary" style={{ width: '49%', marginTop: '15px', marginBottom: '15px' }}>Забронировать</Button>
+            <div className="item__reservation-wrap cost-metro">
+              <p className="item__reservation-cost">550</p>
+              <p className="item__reservation-metro">Василеостровская</p>
             </div>
+            <Button type="primary" style={{ width: '49%', marginTop: '15px', marginBottom: '15px' }}>Забронировать</Button>
           </div>
         </div>
+        {/* </div> */}
         <div className="item__description">
           <h2 className="item__description-title">Описание</h2>
           <p className="item__description-text">Самокат очень быстрый и проходимый. Подойдет для прогулки как в парке, так и в городе. Максимальная скорость 35 км/ч. Заряда хватает обычно примерно на 5 часов. Полностью заряжается за 2-3 часа.
@@ -189,7 +194,7 @@ class Item extends Component {
         <div style={{ height: '100px' }}>
 
         </div>
-      </div>
+      </div >
     );
   }
 }
