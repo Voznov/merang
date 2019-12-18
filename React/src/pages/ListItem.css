@@ -44,11 +44,6 @@
   padding: 10px;
 }
 
-.anticon-heart {
-  position: absolute;
-  top: -24px;
-}
-
 .anticon-safety-certificate {
   position: absolute;
   top: -24px;
@@ -69,5 +64,4 @@
   font-size: 16px;
   line-height: 19px;
   color: #7c7c7c;
-  //height: 19px;
 }

@@ -1,0 +1,79 @@
+.liked__type {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 6px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.liked__wrap {
+  width: 50%;
+}
+
+.liked__header {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 54px;
+  text-align: center;
+  color: #7c7c7c;
+}
+
+.liked__active {
+  color: #5207f2;
+  border-bottom: 2px solid #5207f2;
+}
+
+.liked__list {
+  margin-top: 15px;
+}
+
+.liked__card {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.liked__img {
+  margin: 15px 15px 15px 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.liked__description {
+  width: 100%;
+}
+
+.liked__price-icon-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.liked__price {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #5207f2;
+}
+
+.liked__price::after {
+  content: " \20BD/день";
+}
+
+.liked__like-icon {
+  margin: 0;
+  font-size: 18px;
+}
+
+.liked__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #7c7c7c;
+}

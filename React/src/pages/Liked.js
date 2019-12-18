@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import classNames from "classnames";
+import { Icon, Button } from 'antd';
 
 import "./Liked.css";
 
@@ -69,9 +70,25 @@ class Card extends Component {
     }
     render() {
         let card = this.state.card;
-        return <div className="liked__card">
+        return <div className="liked__list">
+            <div className="liked__card">
+                <img
+                    className="liked__img"
+                    alt=""
+                    src='https://i.pinimg.com/originals/40/6d/fb/406dfba686da73abe5d620b10e600785.png'
+                />
+
+                <div className="liked__description">
+                    <div className="liked__price-icon-wrap">
+                        <p className="liked__price">550</p>
+                        <Icon className="liked__like-icon" type="heart" theme="filled" style={{ color: '#E07676' }} />
+                    </div>
+                    <h2 className="liked__title">Самокат внедорожный</h2>
+                    <Button type="primary" style={{ width: '100%', marginTop: '10px' }}>Забронировать</Button>
+                </div>
 
 
+            </div>
         </div>
     }
 }
