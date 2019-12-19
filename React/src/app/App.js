@@ -16,7 +16,7 @@ import Greeting from '../pages/Greeting';
 import Profile from '../pages/Profile';
 import Search from '../pages/Search';
 import Deals from '../pages/Deals';
-import Liked from '../pages/Liked';
+import Item from '../pages/Item';
 import Chats from '../pages/Chats';
 import SearchForm from '../pages/SearchForm';
 
@@ -151,8 +151,8 @@ class App extends Component {
                 <Search />
               </Route>
               <Route path="/liked">
-                {/* LIKED */}
-                <Liked />
+                <Item />
+                {/* <Liked /> */}
               </Route>
               <Route path="/users/:username" render={
                 (props) => <Profile isAuthenticated={this.state.isAuthenticated} currentUser={this.state.currentUser} onLogout={this.handleLogout} {...props} />
